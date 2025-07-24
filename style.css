@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #262626;
+    background-image: url('https://www.instagram.com/static/images/homepage/phones/home-phones.png/1dc085cdb87d.png');
+    background-repeat: no-repeat;
+    background-position: -30px center;
+    background-size: 454px 618px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 350px;
+    width: 100%;
+    margin-left: 450px;
+}
+
+.login-box {
+    border: 1px solid #dbdbdb;
+    background-color: white;
+    padding: 20px 40px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.logo {
+    margin: 22px auto 12px;
+    width: 175px;
+}
+
+.form-group {
+    margin-bottom: 12px;
+    position: relative;
+}
+
+input {
+    width: 100%;
+    padding: 9px 8px 7px;
+    background: #fafafa;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid #a8a8a8;
+}
+
+.error-message {
+    color: #ed4956;
+    font-size: 11px;
+    text-align: right;
+    margin-top: 4px;
+    display: block;
+    padding: 5px;
+    background-color: #fef0f0;
+    border-radius: 3px;
+}
+
+.password-container {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #262626;
+    cursor: pointer;
+    user-select: none;
+    background: rgba(250, 250, 250, 0.8);
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+button {
+    width: 100%;
+    background-color: #0095f6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 7px 16px;
+    font-weight: 600;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #0077cc;
+}
+
+button:disabled {
+    background-color: rgba(0, 149, 246, 0.3);
+    cursor: default;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 18px;
+    color: #8e8e8e;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.divider::before, .divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #dbdbdb;
+    margin: 0 10px;
+}
+
+.facebook-login {
+    color: #385185;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.facebook-login:hover {
+    text-decoration: underline;
+}
+
+.facebook-login svg {
+    margin-right: 8px;
+}
+
+.forgot-password {
+    color: #00376b;
+    font-size: 12px;
+    margin-top: 12px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.signup-box {
+    border: 1px solid #dbdbdb;
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+.signup-box a {
+    color: #0095f6;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.signup-box a:hover {
+    text-decoration: underline;
+}
+
+/* تأثيرات للواجهة */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-5px); }
+    40%, 80% { transform: translateX(5px); }
+}
+
+.shake {
+    animation: shake 0.5s;
+}
+
+/* تصميم متجاوب للهواتف */
+@media (max-width: 875px) {
+    body {
+        background-image: none;
+        background-color: white;
+    }
+    
+    .container {
+        margin-left: 0;
+    }
+    
+    .login-box, .signup-box {
+        border: none;
+        background-color: transparent;
+    }
+}
+
+/* تأثيرات تحميل الزر */
+@keyframes loading {
+    0% { opacity: 0.5; }
+    50% { opacity: 1; }
+    100% { opacity: 0.5; }
+}
+
+.loading-button {
+    animation: loading 1.5s infinite;
+}
